@@ -1,0 +1,58 @@
+const bulidElement = (elementTag, parentElement, className) => {
+  const element = document.createElement(elementTag);
+  element.classList.add(className);
+  parentElement.appendChild(element);
+  return element;
+};
+
+const generateFunction = () => {
+  const container = document.querySelector('.container-posts');
+
+  const card = bulidElement('div', container, 'card');
+
+  const like = bulidElement('div', card, 'like');
+
+  const upBtn = bulidElement('a', like, 'up-btn');
+  upBtn.setAttribute('href', '/like');
+  const up = bulidElement('img', upBtn, 'up');
+  up.src = './icons/up.svg';
+
+  const noLikes = bulidElement('p', like, 'no-likes');
+  noLikes.textContent = '35';
+
+  const downBtn = bulidElement('a', like, 'down-btn');
+  downBtn.setAttribute('href', '/dislike');
+  const down = bulidElement('img', downBtn, 'down');
+  down.src = './icons/down.svg';
+
+  const postInfo = bulidElement('div', card, 'post-inf');
+  const userInfo = bulidElement('div', postInfo, 'user-info');
+
+  const userIcon = bulidElement('img', userInfo, 'user-icon1');
+  userIcon.src = './icons/user.svg';
+
+  const userBtn = bulidElement('a', userInfo, 'user-btn');
+  userBtn.setAttribute('href', '/profilePage');
+  const userName = bulidElement('h4', userBtn, 'user-name');
+  userName.textContent = 'nizar7zak';
+
+  const postBtn = bulidElement('a', postInfo, 'post-btn');
+  postBtn.setAttribute('href', '/postPage');
+  const postTitle = bulidElement('p', postBtn, 'post-title');
+  postTitle.textContent = 'Hello from test every one djsdakjdla';
+
+  const postImg = bulidElement('img', postInfo, 'post-img');
+  postImg.setAttribute('alt', 'Post Photo');
+  postImg.src = './img/sky.jpg';
+
+  const commentInfo = bulidElement('div', postInfo, 'comment-info');
+  const commentIcon = bulidElement('img', commentInfo, 'comment-icon');
+  commentIcon.src = './icons/comment.svg';
+
+  const commentBtn = bulidElement('a', commentInfo, 'comment-btn');
+  commentBtn.setAttribute('href', '/postPage');
+  const commentsNumber = bulidElement('p', commentBtn, 'commtens-number');
+  commentsNumber.textContent = '34 Comments';
+};
+
+generateFunction();

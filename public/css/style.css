@@ -279,3 +279,22 @@ nav {
     color: #757575;
     margin-left: 5px;
 }
+.commtens-number:hover {
+    color: #ff591d;
+
+}
+.up:hover,
+.down:hover {
+    background-color: #ff591d;
+    border-radius: 15px;
+}
+.user-btn,
+.post-btn,
+.comment-btn {
+    text-decoration: none;
+    color: #000;
+}
+.user-btn:hover,
+.post-btn:hover {
+    color: #ff591d;
+}
