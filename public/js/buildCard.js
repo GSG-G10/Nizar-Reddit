@@ -5,7 +5,7 @@ const bulidElement = (elementTag, parentElement, className) => {
   return element;
 };
 
-const generateFunction = () => {
+const generateFunction = (likes, username, title, url, comments) => {
   const container = document.querySelector('.container-posts');
 
   const card = bulidElement('div', container, 'card');
@@ -18,7 +18,7 @@ const generateFunction = () => {
   up.src = './icons/up.svg';
 
   const noLikes = bulidElement('p', like, 'no-likes');
-  noLikes.textContent = '35';
+  noLikes.textContent = likes;
 
   const downBtn = bulidElement('a', like, 'down-btn');
   downBtn.setAttribute('href', '/dislike');
@@ -34,16 +34,16 @@ const generateFunction = () => {
   const userBtn = bulidElement('a', userInfo, 'user-btn');
   userBtn.setAttribute('href', '/profilePage');
   const userName = bulidElement('h4', userBtn, 'user-name');
-  userName.textContent = 'nizar7zak';
+  userName.textContent = username;
 
   const postBtn = bulidElement('a', postInfo, 'post-btn');
   postBtn.setAttribute('href', '/postPage');
   const postTitle = bulidElement('p', postBtn, 'post-title');
-  postTitle.textContent = 'Hello from test every one djsdakjdla';
+  postTitle.textContent = title;
 
   const postImg = bulidElement('img', postInfo, 'post-img');
   postImg.setAttribute('alt', 'Post Photo');
-  postImg.src = './img/sky.jpg';
+  postImg.src = url;
 
   const commentInfo = bulidElement('div', postInfo, 'comment-info');
   const commentIcon = bulidElement('img', commentInfo, 'comment-icon');
@@ -52,7 +52,5 @@ const generateFunction = () => {
   const commentBtn = bulidElement('a', commentInfo, 'comment-btn');
   commentBtn.setAttribute('href', '/postPage');
   const commentsNumber = bulidElement('p', commentBtn, 'commtens-number');
-  commentsNumber.textContent = '34 Comments';
+  commentsNumber.textContent = `${comments} Comments`;
 };
-
-generateFunction();
