@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E5E5E5;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 100%;
+    height: 3rem;
+}
+
+/* style nav bar */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+/* nav for visitors */
+
+.not-auth,
+.auth {
+    justify-content: space-between;
+    width: 30%;
+    align-items: center;
+}
+.not-auth {
+    display: flex;
+}
+.auth {
+    display: none;
+}
+
+.login, 
+.sign-up {
+    width: 45%;
+    height: 70%;
+}
+
+.btn-login,
+.btn-sign-up {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+.btn-login {
+    background-color: #fff;
+    border: 2px solid #0079D3;
+    color: #0079D3;
+}
+.btn-sign-up {
+    background-color: #0079D3;
+    color: #fff;
+    border: none;
+}
+.btn-login:hover {
+    background-color: rgb(226, 246, 255);
+    cursor: pointer;
+}
+.btn-sign-up:hover {
+    background-color: #0080e2;
+    cursor: pointer;
+}
+.btn-login:active {
+    background-color: rgb(208, 241, 255);
+}
+.btn-sign-up:active {
+    background-color: #0f97ff;
+}
+
+/* nav for users */
+
+.create,
+.user {
+    width: 45%;
+    height: 70%;
+}
+.btn-create,
+.btn-user {
+    width: 90%;
+    height: 100%;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    color: #fff;
+}
+.btn-create {
+    background-color: #0079D3;
+}
+.btn-user {
+    color: #000;
+    background-color: #fff;
+
+}
+.create-content,
+.user-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 3px 18px;
+    width: 100%;
+    height: 100%;
+}
+
+.btn-create:hover {
+    background-color: #0080e2;
+    cursor: pointer;
+}
+.btn-create:active {
+    background-color: #0f97ff;
+}
+.btn-user:hover {
+    cursor: pointer;
+    color:#FF4500;
+}
+.user-icon {
+    max-width: 20px;
+}
+.content-btn-user:hover {
+    padding-bottom: 2px;
+    border-bottom: 2px solid #000;
+}
+.btn-logout {
+    padding: 3px;
+    background-color: #FF4500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.btn-logout:hover {
+    background-color: #ff591d;
+}
+.btn-logout:active {
+    background-color: #ff6e3a;
+}
