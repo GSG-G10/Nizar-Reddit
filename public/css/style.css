@@ -26,7 +26,6 @@ nav {
     justify-content: space-between;
     width: 80%;
 }
-
 /* nav for visitors */
 
 .not-auth,
@@ -114,7 +113,6 @@ nav {
     width: 100%;
     height: 100%;
 }
-
 .btn-create:hover {
     background-color: #0080e2;
     cursor: pointer;
@@ -145,4 +143,59 @@ nav {
 }
 .btn-logout:active {
     background-color: #ff6e3a;
+}
+
+/* section trending */
+
+.trending {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 55%;
+    height: 270px;
+    margin-top: 50px;
+}
+
+.trending-topic {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 220px;
+}
+
+.topic-1 {
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('/public/img/sky.jpg');
+}
+.topic-2 {
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('/public/img/night.jpg');
+}
+.topic-3 {
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('/public/img/palnet.jpeg');
+}
+.topic {
+    width: 32%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.topic-title, 
+.topic-content {
+    color: #fff;
+    padding: 15px;
+    background-color: #ff000046;
+    width: 100%;
+}
+.topic-content {
+    font-size: 0.9rem;
+    font-weight: bold;
+    background-color: #07070746;
+    padding: 10px;
+    border-radius: 0px 0px 10px 10px;
 }
