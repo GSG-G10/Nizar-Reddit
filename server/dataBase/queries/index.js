@@ -8,6 +8,7 @@ const deletePostQuery = require('./deletPostQuery');
 const addCommentQuery = require('./addCommentQuery');
 const addlikeQuery = require('./addLikeQuery');
 const deleteLikeQuery = require('./deleteLikeQuery');
+const getUserPage = require('./userPageQuery');
 
 module.exports = {
   addPostQuery,
@@ -20,4 +21,5 @@ module.exports = {
   addCommentQuery,
   addlikeQuery,
   deleteLikeQuery,
+  getUserPage,
 };
