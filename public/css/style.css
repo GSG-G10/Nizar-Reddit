@@ -164,13 +164,13 @@ nav {
 }
 
 .topic-1 {
-    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('/public/img/sky.jpg');
+    background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.6)), url('/img/sky.jpg');
 }
 .topic-2 {
-    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('/public/img/night.jpg');
+    background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.6)), url('/img/night.jpg');
 }
 .topic-3 {
-    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('/public/img/palnet.jpeg');
+    background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.6)), url('/img/palnet.jpeg');
 }
 .topic {
     width: 32%;

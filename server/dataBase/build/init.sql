@@ -35,8 +35,8 @@ INSERT INTO users (email, username, password) VALUES
 ('haniy32@gmail.com', 'fadihany', '2ws#ED$rf');
 
 INSERT INTO posts (user_id, title, content, url) VALUES 
-(1, 'My mother', 'my phone.','141'),
-(2, 'My dsad', 'my fefw.','144r231');
+(1, 'My mother', 'my phone.','https://www.wepal.net/ar/uploads/2732018-073911PM-1.jpg'),
+(2, 'My dsad', 'my fefw.','https://www.wepal.net/ar/uploads/2732018-073911PM-1.jpg');
 
 
 INSERT INTO comments (post_id, user_id, content) VALUES 
