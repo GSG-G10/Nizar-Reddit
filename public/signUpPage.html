@@ -21,27 +21,26 @@
             <form class="form-sign-up" action="/signup" method="POST">
 
                 <label for="user-name">
-                    Username<input class="user-name" type="text" id="user-name">
+                    Username<input class="user-name" name="username" type="text" id="user-name">
                 </label>
 
                 <label for="email">
-                    Email<input class="email" type="email" id="email" >
+                    Email<input class="email" name="email" type="email" id="email" >
                 </label>
 
                 <label for="password">
-                    password<input class="password" type="password" id="password">
+                    password<input class="password" name="password" type="password" id="password">
                 </label>
 
                 <label for="confirm">
-                    Confirm Password<input class="confirm-password" type="password" id="confirm">
+                    Confirm Password<input class="confirm-password"  name="confirm" type="password" id="confirm">
                 </label>
-
 
                 <button type="submit" class="submit">Sign-Up</button>
 
             </form> 
 
-            <p class="new-reddit">Already a redditor? <a class="login" href="/login"> LOG IN</a></p>
+            <p class="new-reddit">Already a redditor? <a class="login" href="/login-page"> LOG IN</a></p>
 
         </div>
 
