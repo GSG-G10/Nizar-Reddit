@@ -30,7 +30,7 @@ body {
     width: 100%;
     background-color: #fff;
 }
-.form-login {
+.form-sign-up {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -39,7 +39,7 @@ body {
     width: 100%;
 }
 
-.login-title {
+.sign-up-title {
     font-size: 2rem;
     font-weight: bold;
 }
@@ -47,19 +47,27 @@ body {
     font-size: 0.9rem;
 }
 .password {
-    margin-left: 14px;
+    margin-left: 63px;
 }
 .user-name {
-    margin-left: 10px;
+    margin-left: 58px;
+}
+.email {
+    margin-left: 84px;
+}
+.confirm-password {
+    margin-left: 5px;
 }
 .user-name, 
-.password {
+.password,
+.email,
+.confirm-password {
     padding: 7px;
     border-radius: 5px;
     border: 2px solid #c4c4c4;
 }
 .submit {
-    margin-left: 75px;
+    margin: 15px 0 0 65px;
     width: 35%;
     height: 35px;
     border-radius: 70px;
@@ -75,6 +83,6 @@ body {
 .submit:active {
     background-color: #0f97ff;
 }
-.sign-up {
+.login {
     text-decoration: none;
 }

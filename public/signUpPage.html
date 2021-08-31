@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/signup.css" rel="stylesheet">
+    <title>Reddit-Sign-up</title>
+</head>
+<body>
+
+    <div class="form-container">
+
+        <img class="welcome-img" src="./img/login.svg">
+
+        <div class="right-side">
+
+            <p class="sign-up-title">Sign-up</p>
+            <p class="desc"> By continuing, you agree to our User Agreement and Privacy Policy.</p>
+
+            <form class="form-sign-up" action="/signup" method="POST">
+
+                <label for="user-name">
+                    Username<input class="user-name" type="text" id="user-name">
+                </label>
+
+                <label for="email">
+                    Email<input class="email" type="email" id="email" >
+                </label>
+
+                <label for="password">
+                    password<input class="password" type="password" id="password">
+                </label>
+
+                <label for="confirm">
+                    Confirm Password<input class="confirm-password" type="password" id="confirm">
+                </label>
+
+
+                <button type="submit" class="submit">Sign-Up</button>
+
+            </form> 
+
+            <p class="new-reddit">Already a redditor? <a class="login" href="/login"> LOG IN</a></p>
+
+        </div>
+
+       
+    </div>
+    
+</body>
+</html>
