@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/login.css" rel="stylesheet">
+    <title>Reddit-login</title>
+</head>
+<body>
+    <div class="form-container">
+
+        <img class="welcome-img" src="./img/login.svg">
+
+        <div class="right-side">
+
+            <p class="login-title">login</p>
+            <p class="desc"> By continuing, you agree to our User Agreement and Privacy Policy.</p>
+
+            <form class="form-login" action="/login" method="POST">
+
+                <label for="user-name">
+                    Username<input class="user-name" type="text" id="user-name">
+                </label>
+
+                <label for="password">
+                    password<input class="password" type="password" id="password" alt="password">
+                </label>
+
+                <button type="submit" class="submit">login</button>
+
+            </form> 
+
+            <p class="new-reddit">New to Reddit? <a class="sign-up" href="/signup"> SIGN UP</a></p>
+
+        </div>
+
+       
+    </div>
+
+</body>
+</html>

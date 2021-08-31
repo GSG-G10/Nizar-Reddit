@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E5E5E5;
+}
+
+.form-container {
+    width: 55%;
+    height: 40%;
+    background-color: rgb(145, 1, 1);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 5%;
+    border-radius: 12px;
+}
+.right-side {
+    padding:1rem 0rem 0rem 4rem ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    height: 500px;
+    width: 100%;
+    background-color: #fff;
+}
+.form-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    height: 240px;
+    width: 100%;
+}
+
+.login-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.desc{
+    font-size: 0.9rem;
+}
+.password {
+    margin-left: 14px;
+}
+.user-name {
+    margin-left: 10px;
+}
+.user-name, 
+.password {
+    padding: 7px;
+    border-radius: 5px;
+    border: 2px solid #c4c4c4;
+}
+.submit {
+    margin-left: 75px;
+    width: 35%;
+    height: 45px;
+    border-radius: 70px;
+    font-weight: bold;
+    background-color: #0079D3;
+    color: #fff;
+    border: none;
+}
+.submit:hover {
+    background-color: #0080e2;
+    cursor: pointer;
+}
+.submit:active {
+    background-color: #0f97ff;
+}
+.sign-up {
+    text-decoration: none;
+}
