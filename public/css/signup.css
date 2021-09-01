@@ -86,3 +86,11 @@ body {
 .login {
     text-decoration: none;
 }
+.error {
+    visibility: hidden;
+    font-size: 1.2rem;
+    color: red;
+    font-weight: bold;
+    font-style: italic;
+    width: 100%;
+}

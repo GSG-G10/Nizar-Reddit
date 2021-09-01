@@ -18,34 +18,34 @@
             <p class="sign-up-title">Sign-up</p>
             <p class="desc"> By continuing, you agree to our User Agreement and Privacy Policy.</p>
 
-            <form class="form-sign-up" action="/signup" method="POST">
+            <div class="form-sign-up">
 
                 <label for="user-name">
-                    Username<input class="user-name" name="username" type="text" id="user-name">
+                    Username<input class="user-name" name="username" type="text">
                 </label>
 
                 <label for="email">
-                    Email<input class="email" name="email" type="email" id="email" >
+                    Email<input class="email" name="email" type="email">
                 </label>
 
                 <label for="password">
-                    password<input class="password" name="password" type="password" id="password">
+                    password<input class="password" name="password" type="password">
                 </label>
 
                 <label for="confirm">
-                    Confirm Password<input class="confirm-password"  name="confirm" type="password" id="confirm">
+                    Confirm Password<input class="confirm-password"  name="confirm" type="password">
                 </label>
 
-                <button type="submit" class="submit">Sign-Up</button>
+                <button type="submit" class="submit" id="signup">Sign-Up</button>
+                
+            </div> 
+            <p class="error">error</p>
 
-            </form> 
-
-            <p class="new-reddit">Already a redditor? <a class="login" href="/login-page"> LOG IN</a></p>
+            <p class="new-reddit">Already a redditor? <a class="login" href="/login-page">LOG IN</a></p>
 
         </div>
 
-       
     </div>
-    
+    <script src="./js/signUpDom.js"></script>
 </body>
 </html>

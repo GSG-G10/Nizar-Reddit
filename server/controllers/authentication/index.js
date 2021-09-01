@@ -1,3 +1,3 @@
-const signUpValidate = require('./signUpValidte');
+const signUpController = require('./signUpController');
 
-module.exports = { signUpValidate };
+module.exports = { signUpController };
