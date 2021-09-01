@@ -5,8 +5,11 @@ const bulidElement = (elementTag, parentElement, className) => {
   return element;
 };
 
-const generateFunction = (likes, username, title, url, comments) => {
+const generateFunction = (postId, likes, username, title, url, comments, singlePost) => {
   const container = document.querySelector('.container-posts');
+  if (singlePost) {
+    container.textContent = '';
+  }
 
   const card = bulidElement('div', container, 'card');
 
@@ -37,7 +40,7 @@ const generateFunction = (likes, username, title, url, comments) => {
   userName.textContent = username;
 
   const postBtn = bulidElement('a', postInfo, 'post-btn');
-  postBtn.setAttribute('href', '/postPage');
+  postBtn.setAttribute('href', `/postPage?id=${postId}`);
   const postTitle = bulidElement('p', postBtn, 'post-title');
   postTitle.textContent = title;
 
