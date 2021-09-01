@@ -8,7 +8,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color: #E5E5E5;
+    background-color: #dfdede;
 }
 header {
     display: flex;
@@ -226,6 +226,7 @@ nav {
     margin-bottom: 25px;
     background-color: #FFF;
     border-radius: 7px;
+    border: 1px solid #c2c2c2;
 
 }
 .like {
@@ -236,7 +237,7 @@ nav {
     width: 10%;
     height: 100%;
     padding-top: 20px;
-    background-color: #d1d1d1;
+    background-color: #e9e9e9;
     border-radius: 7px 0px 0px 7px;
 
 }
@@ -257,6 +258,10 @@ nav {
     width: 100%;
     height: 40px;
 }
+.comment-info,
+.post-title {
+    margin-left: 20px;
+}
 .user-icon1 {
     max-width: 25px;
 }
@@ -272,8 +277,10 @@ nav {
 }
 .post-img {
     height: 300px;
-    width: 100%;
+    width: 85%;
     border-radius: 20px;
+    align-self: center;
+    border: 2px solid #c2c2c2;
 }
 .commtens-number {
     color: #757575;

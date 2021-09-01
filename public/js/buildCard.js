@@ -7,8 +7,9 @@ const bulidElement = (elementTag, parentElement, className) => {
 
 const generateFunction = (postId, likes, username, title, url, comments, singlePost) => {
   const container = document.querySelector('.container-posts');
+  const containerLoading = document.querySelector('.lodaing-container');
   if (singlePost) {
-    container.textContent = '';
+    containerLoading.textContent = '';
   }
 
   const card = bulidElement('div', container, 'card');
@@ -53,7 +54,7 @@ const generateFunction = (postId, likes, username, title, url, comments, singleP
   commentIcon.src = './icons/comment.svg';
 
   const commentBtn = bulidElement('a', commentInfo, 'comment-btn');
-  commentBtn.setAttribute('href', '/postPage');
+  commentBtn.setAttribute('href', `/postPage?id=${postId}`);
   const commentsNumber = bulidElement('p', commentBtn, 'commtens-number');
   commentsNumber.textContent = `${comments} Comments`;
 };
