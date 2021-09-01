@@ -14,6 +14,8 @@ const visitor = () => {
 const checkCookie = (coo) => {
   if (coo) {
     user();
+    const userName = document.querySelector('.content-btn-user');
+    userName.textContent = cookies.split('=')[2];
   } else {
     visitor();
   }
