@@ -7,7 +7,7 @@ const signUpSchema = Joi.object({
   password: Joi.string().pattern(
     new RegExp('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$'),
   ).required(),
-  confirmPassword: Joi.ref('password'),
+  confirm: Joi.ref('password'),
 });
 
 module.exports = signUpSchema;
