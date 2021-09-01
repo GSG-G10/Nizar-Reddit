@@ -17,26 +17,30 @@
             <p class="login-title">login</p>
             <p class="desc"> By continuing, you agree to our User Agreement and Privacy Policy.</p>
 
-            <form class="form-login" action="/login" method="POST">
+            <div class="form-login">
 
                 <label for="user-name">
-                    Username<input class="user-name" type="text" id="user-name">
+                    Email<input class="email" type="email">
                 </label>
 
                 <label for="password">
-                    password<input class="password" type="password" id="password"https://meet.google.com/qdm-ovcj-vuo>
+                    password<input class="password" type="password">
                 </label>
 
-                <button type="submit" class="submit">login</button>
+                <button type="submit" class="submit" id="login">login</button>
 
-            </form> 
+            </div> 
 
-            <p class="new-reddit">New to Reddit? <a class="sign-up" href="/sign-up-page"> SIGN UP</a></p>
+            <p class="error">error</p>
+
+            <p class="new-reddit">
+                New to Reddit? <a class="sign-up" href="/sign-up-page"> SIGN UP</a>
+            </p>
 
         </div>
 
-       
     </div>
-
+    
+    <script src="./js/loginDom.js"></script>
 </body>
 </html>

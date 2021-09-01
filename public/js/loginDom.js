@@ -1,18 +1,15 @@
-const submit = document.querySelector('#signup');
+const login = document.querySelector('#login');
 
-submit.addEventListener('click', () => {
-  const userName = document.querySelector('.user-name').value;
+login.addEventListener('click', () => {
   const email = document.querySelector('.email').value;
   const password = document.querySelector('.password').value;
-  const confirm = document.querySelector('.confirm-password').value;
   const errorMessage = document.querySelector('.error');
   errorMessage.style.visibility = 'hidden';
   errorMessage.textContent = 'update';
 
-  const data = {
-    username: userName, email, password, confirm,
-  };
-  fetch('/signup', {
+  const data = { email, password };
+
+  fetch('/login', {
     method: 'POST',
     body: JSON.stringify(data),
     headers: {
@@ -28,9 +25,9 @@ submit.addEventListener('click', () => {
       } else {
         res.json()
           .then((respon) => respon.message)
-          .then((respon) => {
+          .then((result) => {
             errorMessage.style.visibility = 'visible';
-            errorMessage.textContent = respon;
+            errorMessage.textContent = result;
           });
       }
     })
