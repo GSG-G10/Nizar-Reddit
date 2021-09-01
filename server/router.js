@@ -10,6 +10,9 @@ router.get('/postdata', getMainPage);
 router.get('/sign-up-page', getSignUpPage);
 router.get('/login-page', getLoginPage);
 router.post('/signup', signUpValidate, signUpController, userCookie);
+router.post('/login', (req, res) => {
+    console.log(req.body)
+})
 
 router.use(error404);
 router.use(error500);
