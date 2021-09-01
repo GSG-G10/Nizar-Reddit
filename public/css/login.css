@@ -49,10 +49,10 @@ body {
 .password {
     margin-left: 14px;
 }
-.user-name {
-    margin-left: 10px;
+.email {
+    margin-left: 35px;
 }
-.user-name, 
+.email, 
 .password {
     padding: 7px;
     border-radius: 5px;

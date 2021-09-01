@@ -10,6 +10,8 @@ const addlikeQuery = require('./addLikeQuery');
 const deleteLikeQuery = require('./deleteLikeQuery');
 const getUserPage = require('./userPageQuery');
 const checkUserExisitQuery = require('./checkUserExisitQuery');
+const getPasswordByEmail = require('./getPasswordByEmail');
+const getIdByEmail = require('./getIdByEmail');
 
 module.exports = {
   addPostQuery,
@@ -24,4 +26,6 @@ module.exports = {
   deleteLikeQuery,
   getUserPage,
   checkUserExisitQuery,
+  getPasswordByEmail,
+  getIdByEmail,
 };
