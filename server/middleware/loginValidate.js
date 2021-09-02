@@ -18,8 +18,8 @@ const loginValidate = (req, res, next) => {
                     if (result) {
                       getIdByEmail(req.body.email)
                         .then((id) => {
-                          req.body.id = id.rows[0].id;
-                          req.body.username = id.rows[0].username;
+                          req.id = id.rows[0].id;
+                          req.username = id.rows[0].username;
                           next();
                         });
                     } else {

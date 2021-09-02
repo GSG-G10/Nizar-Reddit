@@ -5,12 +5,9 @@ const bulidElement = (elementTag, parentElement, className) => {
   return element;
 };
 
-const generateFunction = (postId, likes, username, title, url, comments, singlePost) => {
+const generateFunction = (postId, likes, username, title, url, comments, singlePost, postContent) => {
   const container = document.querySelector('.container-posts');
   const containerLoading = document.querySelector('.lodaing-container');
-  if (singlePost) {
-    containerLoading.textContent = '';
-  }
 
   const card = bulidElement('div', container, 'card');
 
@@ -49,6 +46,12 @@ const generateFunction = (postId, likes, username, title, url, comments, singleP
   postImg.setAttribute('alt', 'Post Photo');
   postImg.src = url;
 
+  if (singlePost) {
+    containerLoading.textContent = '';
+    const contentSubSection = bulidElement('div', postInfo, 'post-content');
+    const contentPost = bulidElement('p', contentSubSection, 'post-paragraph');
+    contentPost.textContent = postContent;
+  }
   const commentInfo = bulidElement('div', postInfo, 'comment-info');
   const commentIcon = bulidElement('img', commentInfo, 'comment-icon');
   commentIcon.src = './icons/comment.svg';

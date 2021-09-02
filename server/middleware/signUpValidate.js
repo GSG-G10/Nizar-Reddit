@@ -10,7 +10,7 @@ const signUpValidate = (req, res, next) => {
       } else {
         signUpSchema.validateAsync(req.body)
           .then((value) => {
-            req.body.value = value;
+            req.value = value;
             next();
           })
           .catch((err) => {

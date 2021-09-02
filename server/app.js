@@ -8,7 +8,7 @@ const router = require('./router');
 
 const app = express();
 
-app.set('PORT', process.env.PORT || '3333');
+app.set('PORT', process.env.PORT || '5555');
 app.disable('x-powered-by');
 
 app.use(express.json());

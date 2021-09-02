@@ -7,7 +7,7 @@ const showData = () => {
     .then((data) => data.rows[0])
     .then((element) => {
       // eslint-disable-next-line max-len
-      generateFunction(element.id, element.likes, element.username, element.title, element.url, element.comments, true);
+      generateFunction(element.id, element.likes, element.username, element.title, element.url, element.comments, true, element.content);
     });
 };
 showData();

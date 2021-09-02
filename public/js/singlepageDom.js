@@ -5,9 +5,9 @@ const createTextArea = () => {
   const addComment = bulidElement('div', contianerComments, 'auth1');
   const textArea = bulidElement('textarea', addComment, 'add-text');
   textArea.setAttribute('name', 'comment');
+
   const commentBtn = bulidElement('button', addComment, 'comment-button');
   commentBtn.textContent = 'comment';
-  commentBtn.setAttribute('href', '/addcomment');
 
   const notAuth = bulidElement('div', contianerComments, 'not-auth1');
   const containerToLogin = bulidElement('div', notAuth, 'container-login');
