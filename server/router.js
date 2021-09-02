@@ -1,7 +1,7 @@
 const express = require('express');
 
 const { error404, error500 } = require('./controllers/errors');
-const { getPostDataController } = require('./data');
+const { getPostDataController, getCommentsData } = require('./data');
 const {
   getMainPage, getSignUpPage, getLoginPage, getPostPage,
 } = require('./controllers/getPages');
@@ -19,6 +19,7 @@ router.get('/login-page', getLoginPage);
 router.get('/logout', removeCookie);
 router.get('/postPage', getPostPage);
 router.get('/post', getPostDataController);
+router.get('/comments', getCommentsData);
 router.post('/signup', signUpValidate, signUpController, userCookie);
 router.post('/login', loginValidate, userCookie);
 
