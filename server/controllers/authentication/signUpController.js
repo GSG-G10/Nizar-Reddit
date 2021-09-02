@@ -4,13 +4,13 @@ const { signUpQuery } = require('../../dataBase/queries');
 const signUpController = (req, res, next) => {
   const {
     username, email, password,
-  } = req.body.value;
+  } = req.value;
   hashPassword(password)
     .then((hashedPass) => signUpQuery({ username, email, password: hashedPass }))
     .then((data) => data.rows[0])
     .then((data) => {
-      req.body.id = data.id;
-      req.body.username = data.username;
+      req.id = data.id;
+      req.username = data.username;
       next();
     });
 };
