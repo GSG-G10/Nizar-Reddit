@@ -51,4 +51,5 @@ INSERT INTO votes (post_id, user_id, likes) VALUES
 (2,1,1);
 
 
+
 COMMIT;

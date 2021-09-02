@@ -12,6 +12,7 @@ const getUserPage = require('./userPageQuery');
 const checkUserExisitQuery = require('./checkUserExisitQuery');
 const getPasswordByEmail = require('./getPasswordByEmail');
 const getIdByEmail = require('./getIdByEmail');
+const getPostData = require('./getSinglePostData');
 
 module.exports = {
   addPostQuery,
@@ -28,4 +29,5 @@ module.exports = {
   checkUserExisitQuery,
   getPasswordByEmail,
   getIdByEmail,
+  getPostData,
 };

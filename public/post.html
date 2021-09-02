@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/postPage.css" rel="stylesheet"> 
     <title>Reddit</title>
 </head>
-
 <body>
+
     <header>
         <nav>
             <img class="logo" src="./icons/logo.svg" alt="logo-reddit">
@@ -52,48 +52,25 @@
         </nav>
     </header>
 
-    <section class="trending">
-
-        <h2 class="trending-title">Trending Today</h2>
-
-        <div class="trending-topic">
-
-            <div class="topic topic-1">
-                <h4 class="topic-title">The sky is gray</h4>
-                <p class="topic-content">I don't say the sky is gray, but I look at a rose long</p>
-
-            </div>
-
-            <div class="topic topic-2">
-                <h4 class="topic-title">Long night</h4>
-                <p class="topic-content">In the face of the night, exile is equal to home</p>
-            </div>
-
-            <div class="topic topic-3">
-                <h4 class="topic-title">The biggest world</h4>
-                <p class="topic-content">you are a small crime? No in you
-                    is the greater world involved
-                </p>
-            </div> 
-
-        </div>
-
-    </section>
-
-    <section class="popular">
-
-        <h2 class="popular-title">Popular posts</h2>
+    <section class="popular1">
 
         <div class="container-posts">
-            
+            <div class="lodaing-container">
+                <img  class="loading" src="./icons/logo.svg">
+            </div>
         </div>
 
     </section>
 
-    <script src="./js/buildCard.js"></script>
-    <script src="./js/fetch.js"></script>
-    <script src="./js/logout.js"></script>
-    <script src="./js/general.js"></script>
-</body>
+    
 
+
+    <script class="loading" src="./js/buildCard.js"></script>
+    <script src="./js/fetchPost.js"></script>
+    <script src="./js/logout.js"></script>
+    <script src="./js/singlepageDom.js"></script>
+    <script src="./js/fetchComments.js"></script>
+    <script src="./js/general.js"></script>
+
+</body>
 </html>

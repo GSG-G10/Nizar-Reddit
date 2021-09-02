@@ -5,8 +5,12 @@ const bulidElement = (elementTag, parentElement, className) => {
   return element;
 };
 
-const generateFunction = (likes, username, title, url, comments) => {
+const generateFunction = (postId, likes, username, title, url, comments, singlePost) => {
   const container = document.querySelector('.container-posts');
+  const containerLoading = document.querySelector('.lodaing-container');
+  if (singlePost) {
+    containerLoading.textContent = '';
+  }
 
   const card = bulidElement('div', container, 'card');
 
@@ -37,7 +41,7 @@ const generateFunction = (likes, username, title, url, comments) => {
   userName.textContent = username;
 
   const postBtn = bulidElement('a', postInfo, 'post-btn');
-  postBtn.setAttribute('href', '/postPage');
+  postBtn.setAttribute('href', `/postPage?id=${postId}`);
   const postTitle = bulidElement('p', postBtn, 'post-title');
   postTitle.textContent = title;
 
@@ -50,7 +54,7 @@ const generateFunction = (likes, username, title, url, comments) => {
   commentIcon.src = './icons/comment.svg';
 
   const commentBtn = bulidElement('a', commentInfo, 'comment-btn');
-  commentBtn.setAttribute('href', '/postPage');
+  commentBtn.setAttribute('href', `/postPage?id=${postId}`);
   const commentsNumber = bulidElement('p', commentBtn, 'commtens-number');
   commentsNumber.textContent = `${comments} Comments`;
 };
