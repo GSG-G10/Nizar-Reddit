@@ -9,7 +9,7 @@ const showPostsUser = () => {
   }).then((res) => res.json())
     .then((data) => {
       data.forEach((element) => {
-        generateFunction(element.id, element.likes, element.username, element.title, element.url, element.comments, false, null, true);
+        generateFunction(element.id, element.likes, element.username, element.title, element.url, element.comments, false, null, true, true);
       });
     });
 };

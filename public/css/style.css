@@ -253,15 +253,16 @@ nav {
     padding: 20px;
 }
 .user-info,
-.comment-info {
+.comment-info,
+.remove-info {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 100%;
     height: 40px;
 }
 .comment-info,
-.post-title {
+.post-title,
+.remove-info {
     margin-left: 20px;
 }
 .user-icon1 {
@@ -284,11 +285,14 @@ nav {
     align-self: center;
     border: 2px solid #c2c2c2;
 }
-.commtens-number {
+.commtens-number,
+.remove-btn {
     color: #757575;
     margin-left: 5px;
+    text-decoration: none;
 }
-.commtens-number:hover {
+.commtens-number:hover,
+.remove-btn:hover {
     color: #ff591d;
 
 }

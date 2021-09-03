@@ -5,7 +5,7 @@ const bulidElement = (elementTag, parentElement, className) => {
   return element;
 };
 
-const generateFunction = (postId, likes, username, title, url, comments, singlePost, postContent, profilePage) => {
+const generateFunction = (postId, likes, username, title, url, comments, singlePost, postContent, profilePage, admin) => {
   const container = document.querySelector('.container-posts');
   const containerLoading = document.querySelector('.lodaing-container');
 
@@ -52,7 +52,10 @@ const generateFunction = (postId, likes, username, title, url, comments, singleP
     const contentPost = bulidElement('p', contentSubSection, 'post-paragraph');
     contentPost.textContent = postContent;
   }
-  const commentInfo = bulidElement('div', postInfo, 'comment-info');
+
+  const commentRemove = bulidElement('div', postInfo, 'comment-reomve');
+  
+  const commentInfo = bulidElement('div', commentRemove, 'comment-info');
   const commentIcon = bulidElement('img', commentInfo, 'comment-icon');
   commentIcon.src = './icons/comment.svg';
 
@@ -60,6 +63,18 @@ const generateFunction = (postId, likes, username, title, url, comments, singleP
   commentBtn.setAttribute('href', `/postPage?id=${postId}`);
   const commentsNumber = bulidElement('p', commentBtn, 'commtens-number');
   commentsNumber.textContent = `${comments} Comments`;
+
+  if (admin) {
+    const remveInfo = bulidElement('div', commentRemove, 'remove-info');
+    const removeIcon = bulidElement('img', remveInfo, 'reomve-icon');
+    removeIcon.src = './icons/remove.svg';
+
+    const removeBtn = bulidElement('a', remveInfo, 'remove-btn');
+    removeBtn.setAttribute('href', `/deletePost?id=${postId}`);
+    const removeText = bulidElement('p', removeBtn, 'reomve-text');
+    removeText.textContent = 'Remove';
+  }
+
   if (profilePage) {
     updateUserName();
   }
