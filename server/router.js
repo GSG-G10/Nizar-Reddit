@@ -10,7 +10,7 @@ const {
 const { signUpController } = require('./controllers/authentication');
 
 const {
-  signUpValidate, userCookie, loginValidate, removeCookie, checkAuth,
+  signUpValidate, userCookie, loginValidate, removeCookie, checkAuth, checkUserIsAdmin,
 } = require('./middleware');
 
 const router = express.Router();
@@ -22,7 +22,7 @@ router.get('/postPage', getPostPage);
 router.get('/post', getPostDataController);
 router.get('/comments', getCommentsData);
 router.get('/', redirectMainController);
-router.get('/profilePage', getProfilepage);
+router.get('/profilePage', checkUserIsAdmin, userCookie, getProfilepage);
 router.get('/profileposts', getProfilePostsData);
 router.post('/addcomment', checkAuth, insertComment);
 router.post('/signup', signUpValidate, signUpController, userCookie);

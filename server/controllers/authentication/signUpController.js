@@ -11,6 +11,7 @@ const signUpController = (req, res, next) => {
     .then((data) => {
       req.id = data.id;
       req.username = data.username;
+      req.admin = false;
       next();
     });
 };

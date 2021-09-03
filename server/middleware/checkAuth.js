@@ -8,7 +8,7 @@ const checkAuth = (req, res, next) => {
       res.clearCookie('username').clearCookie('token').redirect('/');
     } else {
       // eslint-disable-next-line no-lonely-if
-      if (decoded.is_admin) {
+      if (decoded.is_user) {
         req.value = {
           postId, userId: decoded.id, username: decoded.username, content: req.body.textArea,
         };
