@@ -2,6 +2,8 @@ const cookies = document.cookie;
 const cookieToken = cookies.split('; ')[0].split('=')[1];
 const cookieUserName = cookies.split('; ')[1].split('=')[1];
 
+const admin = document.querySelector('.user');
+admin.setAttribute('href', `/profilePage?name=${cookieUserName}`);
 const notAuthBar = document.querySelector('.not-auth');
 const authBar = document.querySelector('.auth');
 

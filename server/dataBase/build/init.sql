@@ -31,14 +31,15 @@ CREATE TABLE votes (
 );
 
 INSERT INTO users (email, username, password) VALUES 
-('nizar7zakout@gmail.com', 'nizar7zakout', '1qa@WS3ed'),
-('haniy32@gmail.com', 'fadihany', '2ws#ED$rf');
+('nizar7zakout@gmail.com', 'sabaa', '1qa@WS3ed'),
+('nizar7zakout@gmail.com', 'lana', '1qa@WS3ed'),
+('mahmoud.j.jouda@gmail.com', 'reem', '$2a$10$Leus99JVnNStliZGY1h2juEUMDEOEMbAqJNTSkFXCsYUNkzyhBB76');
 
 INSERT INTO posts (user_id, title, content, url) VALUES 
 (1, 'My mother', 'my phone.','https://www.wepal.net/ar/uploads/2732018-073911PM-1.jpg'),
 (1, 'My mother', 'my phone.','https://www.wepal.net/ar/uploads/2732018-073911PM-1.jpg'),
-(1, 'My mother', 'my phone.','https://www.wepal.net/ar/uploads/2732018-073911PM-1.jpg'),
-(1, 'My mother', 'my phone.','https://www.wepal.net/ar/uploads/2732018-073911PM-1.jpg'),
+(3, 'My mother', 'my phone.','https://www.wepal.net/ar/uploads/2732018-073911PM-1.jpg'),
+(3, 'My mother', 'my phone.','https://www.wepal.net/ar/uploads/2732018-073911PM-1.jpg'),
 (2, 'My dsad', 'my fefw.','https://www.wepal.net/ar/uploads/2732018-073911PM-1.jpg');
 
 
