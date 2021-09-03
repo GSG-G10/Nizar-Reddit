@@ -20,6 +20,7 @@ const loginValidate = (req, res, next) => {
                         .then((id) => {
                           req.id = id.rows[0].id;
                           req.username = id.rows[0].username;
+                          req.admin = false;
                           next();
                         });
                     } else {
