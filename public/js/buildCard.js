@@ -5,7 +5,7 @@ const bulidElement = (elementTag, parentElement, className) => {
   return element;
 };
 
-const generateFunction = (postId, likes, username, title, url, comments, singlePost, postContent) => {
+const generateFunction = (postId, likes, username, title, url, comments, singlePost, postContent, profilePage) => {
   const container = document.querySelector('.container-posts');
   const containerLoading = document.querySelector('.lodaing-container');
 
@@ -33,7 +33,7 @@ const generateFunction = (postId, likes, username, title, url, comments, singleP
   userIcon.src = './icons/user.svg';
 
   const userBtn = bulidElement('a', userInfo, 'user-btn');
-  userBtn.setAttribute('href', '/profilePage');
+  userBtn.setAttribute('href', `/profilePage?name=${username}`);
   const userName = bulidElement('h4', userBtn, 'user-name');
   userName.textContent = username;
 
@@ -60,4 +60,7 @@ const generateFunction = (postId, likes, username, title, url, comments, singleP
   commentBtn.setAttribute('href', `/postPage?id=${postId}`);
   const commentsNumber = bulidElement('p', commentBtn, 'commtens-number');
   commentsNumber.textContent = `${comments} Comments`;
+  if (profilePage) {
+    updateUserName();
+  }
 };

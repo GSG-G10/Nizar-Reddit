@@ -1,0 +1,61 @@
+.card {
+    margin-top: 40px;
+}
+.container-posts {
+    margin-top: 100px;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    height: 270px;
+    position: relative;
+    padding-top: 50px;
+}
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    padding: 0px 10% 0px 10%;
+    z-index: 10;
+}
+.user-page {
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+}
+.popular1 {
+    margin-top: -70px;
+}
+.profile-cover {
+    height: 70%;
+    width: 100%;
+}
+.user-info1 {
+    width: 300px;
+    height: 90px;
+    position: absolute;
+    top: 160px;
+    left: 200px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 10px;
+}
+.user-pro {
+    margin-left: 25px;
+    align-self: flex-end;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+    padding-bottom: 5px;
+    text-decoration: none;
+
+}
+.user-pro:hover {
+    color: #FF4500;
+    border-bottom: 2px solid #FF4500;
+}

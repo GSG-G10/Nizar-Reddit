@@ -36,6 +36,9 @@ INSERT INTO users (email, username, password) VALUES
 
 INSERT INTO posts (user_id, title, content, url) VALUES 
 (1, 'My mother', 'my phone.','https://www.wepal.net/ar/uploads/2732018-073911PM-1.jpg'),
+(1, 'My mother', 'my phone.','https://www.wepal.net/ar/uploads/2732018-073911PM-1.jpg'),
+(1, 'My mother', 'my phone.','https://www.wepal.net/ar/uploads/2732018-073911PM-1.jpg'),
+(1, 'My mother', 'my phone.','https://www.wepal.net/ar/uploads/2732018-073911PM-1.jpg'),
 (2, 'My dsad', 'my fefw.','https://www.wepal.net/ar/uploads/2732018-073911PM-1.jpg');
 
 

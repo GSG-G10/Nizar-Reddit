@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/postPage.css" rel="stylesheet"> 
+    <link href="./css/profilepage.css" rel="stylesheet"> 
+    <title>Reddit</title>
+</head>
+<body>
+
+    <header>
+
+        <nav>
+            <a class="logo-link" href="/">
+                <img class="logo" src="./icons/logo.svg" alt="logo-reddit">
+            </a>
+
+            <div class="not-auth">           
+                <a class="login" href="/login-page">
+                    <button class="btn-login">Log in</button>
+                </a>
+                <a class="sign-up" href="/sign-up-page">
+                    <button class="btn-sign-up">Sign up</button>
+                </a>
+            </div>
+
+            <div class="auth">   
+
+                <a class="create" href="#">
+                    <button class="btn-create">
+                        <div class="create-content">
+                            <img  class="create-icon" src="./icons/create.svg">
+                            <p class="content-btn-create">Create</p>
+                        </div>
+                    </button>
+                </a>
+
+                <a class="user" href="/profilePage">
+                    <button class="btn-user">
+                        <div class="user-content">
+                            <img  class="user-icon" src="./icons/user.svg">
+                            <p class="content-btn-user">Nizar7zak</p>
+                        </div>
+                    </button>
+                </a>
+                <a class="logout" href="/logout">
+                    <button class="btn-logout">
+                        <img class="logout-image" alt="logOut" src="./icons/logout.svg">
+                    </button>
+                </a>
+            </div>
+
+        </nav>
+
+        <div class="user-page">
+            <img src="./img/profile-cover.svg" class="profile-cover" alt="porfile-cover">
+        </div>
+
+        <div class="user-info1">
+            <img src="./img/userpro.svg" alt="profile-user">
+            <a  href="profilePage" class="user-pro">Nizar7zak</a>
+        </div>
+
+    </header>
+
+    <section class="popular1">
+
+        <div class="container-posts">
+
+        </div>
+
+    </section>
+    <script src="./js/domProfilePage.js"></script>
+    <script src="./js/buildCard.js"></script>
+    <script src="./js/logout.js"></script>
+    <script src="./js/general.js"></script>  
+    <script src="./js/fetchProfilePage.js"></script>
+</body>
+</html>
