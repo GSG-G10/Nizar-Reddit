@@ -1,10 +1,10 @@
 const express = require('express');
 
 const { error404, error500 } = require('./controllers/errors');
-const { getPostDataController, getCommentsData } = require('./data');
+const { getPostDataController, getCommentsData, getProfilePostsData } = require('./data');
 const { insertComment } = require('./controllers/insertDataController');
 const {
-  getMainPage, getSignUpPage, getLoginPage, getPostPage, redirectMainController,
+  getMainPage, getSignUpPage, getLoginPage, getPostPage, redirectMainController, getProfilepage,
 } = require('./controllers/getPages');
 
 const { signUpController } = require('./controllers/authentication');
@@ -22,6 +22,8 @@ router.get('/postPage', getPostPage);
 router.get('/post', getPostDataController);
 router.get('/comments', getCommentsData);
 router.get('/', redirectMainController);
+router.get('/profilePage', getProfilepage);
+router.get('/profileposts', getProfilePostsData);
 router.post('/addcomment', checkAuth, insertComment);
 router.post('/signup', signUpValidate, signUpController, userCookie);
 router.post('/login', loginValidate, userCookie);

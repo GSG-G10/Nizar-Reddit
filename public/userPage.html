@@ -5,11 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/postPage.css" rel="stylesheet"> 
+    <link href="./css/profilepage.css" rel="stylesheet"> 
     <title>Reddit</title>
 </head>
 <body>
 
     <header>
+
         <nav>
             <a class="logo-link" href="/">
                 <img class="logo" src="./icons/logo.svg" alt="logo-reddit">
@@ -51,6 +54,16 @@
             </div>
 
         </nav>
+
+        <div class="user-page">
+            <img src="./img/profile-cover.svg" class="profile-cover" alt="porfile-cover">
+        </div>
+
+        <div class="user-info1">
+            <img src="./img/userpro.svg" alt="profile-user">
+            <a  href="profilePage" class="user-pro">Nizar7zak</a>
+        </div>
+
     </header>
 
     <section class="popular1">
@@ -60,8 +73,10 @@
         </div>
 
     </section>
+    <script src="./js/domProfilePage.js"></script>
     <script src="./js/buildCard.js"></script>
     <script src="./js/logout.js"></script>
     <script src="./js/general.js"></script>  
+    <script src="./js/fetchProfilePage.js"></script>
 </body>
 </html>
