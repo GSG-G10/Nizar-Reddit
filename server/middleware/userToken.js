@@ -7,12 +7,8 @@ const userCookie = ((req, res, next) => {
   const cookie = sign({
     id, username, is_user: true, is_admin: false,
   }, process.env.SECRET);
-  if (admin) {
-    res.cookie('token', cookie, { secure: true }).cookie('username', username, { secure: true }).cookie('admin', admin, { secure: true });
-    next();
-  } else {
-    res.cookie('token', cookie, { secure: true }).cookie('username', username, { secure: true }).cookie('admin', admin, { secure: true }).redirect('/');
-  }
+  res.cookie('token', cookie, { secure: true }).cookie('username', username, { secure: true }).cookie('admin', admin, { secure: true });
+  next();
 });
 
 module.exports = userCookie;

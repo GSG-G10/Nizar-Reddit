@@ -5,6 +5,10 @@ const bulidElement = (elementTag, parentElement, className) => {
   return element;
 };
 
+if (window.location.pathname === '/profilePage') {
+  updateUserName();
+}
+
 const generateFunction = (postId, likes, username, title, url, comments, singlePost, postContent, profilePage, admin) => {
   const container = document.querySelector('.container-posts');
   const containerLoading = document.querySelector('.lodaing-container');
@@ -54,7 +58,7 @@ const generateFunction = (postId, likes, username, title, url, comments, singleP
   }
 
   const commentRemove = bulidElement('div', postInfo, 'comment-reomve');
-  
+
   const commentInfo = bulidElement('div', commentRemove, 'comment-info');
   const commentIcon = bulidElement('img', commentInfo, 'comment-icon');
   commentIcon.src = './icons/comment.svg';
@@ -68,14 +72,37 @@ const generateFunction = (postId, likes, username, title, url, comments, singleP
     const remveInfo = bulidElement('div', commentRemove, 'remove-info');
     const removeIcon = bulidElement('img', remveInfo, 'reomve-icon');
     removeIcon.src = './icons/remove.svg';
-
     const removeBtn = bulidElement('a', remveInfo, 'remove-btn');
-    removeBtn.setAttribute('href', `/deletePost?id=${postId}`);
     const removeText = bulidElement('p', removeBtn, 'reomve-text');
     removeText.textContent = 'Remove';
+    // did fetch here just for read postId
+    removeBtn.addEventListener('click', () => {
+      fetch('/deletePost', {
+        method: 'DELETE',
+        body: JSON.stringify({ postId }),
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+      })
+        .then((res) => {
+          if (res.redirected) {
+            window.location.href = res.url;
+          }
+        });
+    });
+
+    const checkAdminCookie = () => {
+      if (cookieAdmin === 'true') {
+        remveInfo.setAttribute('style', 'display: flex;');
+      } else if (cookieAdmin === 'false') {
+        remveInfo.setAttribute('style', 'display: none;');
+      }
+    };
+    checkAdminCookie();
   }
 
-  if (profilePage) {
-    updateUserName();
-  }
+  // if (profilePage) {
+  //   updateUserName();
+  // }
 };

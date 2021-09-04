@@ -2,7 +2,7 @@ const express = require('express');
 
 const { error404, error500 } = require('./controllers/errors');
 const { getPostDataController, getCommentsData, getProfilePostsData } = require('./data');
-const { insertComment } = require('./controllers/insertDataController');
+const { insertComment, deletePost } = require('./controllers/insertDataController');
 const {
   getMainPage, getSignUpPage, getLoginPage, getPostPage, redirectMainController, getProfilepage,
 } = require('./controllers/getPages');
@@ -10,7 +10,7 @@ const {
 const { signUpController } = require('./controllers/authentication');
 
 const {
-  signUpValidate, userCookie, loginValidate, removeCookie, checkAuth, checkUserIsAdmin,
+  signUpValidate, userCookie, loginValidate, removeCookie, checkAuth, checkUserIsAdmin, cookieAdmin,
 } = require('./middleware');
 
 const router = express.Router();
@@ -22,11 +22,15 @@ router.get('/postPage', getPostPage);
 router.get('/post', getPostDataController);
 router.get('/comments', getCommentsData);
 router.get('/', redirectMainController);
-router.get('/profilePage', checkUserIsAdmin, userCookie, getProfilepage);
+router.get('/cookieAdmin', checkUserIsAdmin, cookieAdmin);
+router.get('/profilePage', getProfilepage);
 router.get('/profileposts', getProfilePostsData);
+
+router.delete('/deletePost', checkAuth, deletePost);
+
 router.post('/addcomment', checkAuth, insertComment);
 router.post('/signup', signUpValidate, signUpController, userCookie);
-router.post('/login', loginValidate, userCookie);
+router.post('/login', loginValidate, userCookie, redirectMainController);
 
 router.use(error404);
 router.use(error500);

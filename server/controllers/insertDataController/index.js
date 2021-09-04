@@ -1,3 +1,4 @@
 const insertComment = require('./insertComment');
+const deletePost = require('./deletePost');
 
-module.exports = { insertComment };
+module.exports = { insertComment, deletePost };
