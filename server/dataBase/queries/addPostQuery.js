@@ -1,13 +1,8 @@
 const connection = require('../config/connection');
 
-const addPostQuery = (newPostData) => connection.query(
-  'INSERT INTO posts (user_id, title, content, url) VALUES ($1, $2, $3, $4))',
-  [
-    newPostData.userId,
-    newPostData.title,
-    newPostData.content,
-    newPostData.url,
-  ],
+const addPostQuery = (userId, postTitle, postUrl, postContent) => connection.query(
+  'INSERT INTO posts (user_id, title, url, content) VALUES ($1, $2, $3, $4)',
+  [userId, postTitle, postUrl, postContent],
 );
 
 module.exports = addPostQuery;
