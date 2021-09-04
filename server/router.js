@@ -2,7 +2,7 @@ const express = require('express');
 
 const { error404, error500 } = require('./controllers/errors');
 const { getPostDataController, getCommentsData, getProfilePostsData } = require('./data');
-const { insertComment } = require('./controllers/insertDataController');
+const { insertComment, deletePost } = require('./controllers/insertDataController');
 const {
   getMainPage, getSignUpPage, getLoginPage, getPostPage, redirectMainController, getProfilepage,
 } = require('./controllers/getPages');
@@ -25,9 +25,9 @@ router.get('/', redirectMainController);
 router.get('/cookieAdmin', checkUserIsAdmin, cookieAdmin);
 router.get('/profilePage', getProfilepage);
 router.get('/profileposts', getProfilePostsData);
-router.delete('/deletePost', (req, res) => {
-  console.log(req);
-});
+
+router.delete('/deletePost', checkAuth, deletePost);
+
 router.post('/addcomment', checkAuth, insertComment);
 router.post('/signup', signUpValidate, signUpController, userCookie);
 router.post('/login', loginValidate, userCookie, redirectMainController);

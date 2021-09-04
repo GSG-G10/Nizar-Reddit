@@ -1,5 +1,5 @@
 const updateUserName = () => {
-  const userName = document.querySelector('.user-name');
+  const userName = window.location.href.split('=')[1];
   const userProfile = document.querySelector('.user-pro');
-  userProfile.textContent = userName.textContent;
+  userProfile.textContent = userName;
 };
