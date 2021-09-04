@@ -2,7 +2,7 @@ const express = require('express');
 
 const { error404, error500 } = require('./controllers/errors');
 const { getPostDataController, getCommentsData, getProfilePostsData } = require('./data');
-const { insertComment, deletePost } = require('./controllers/insertDataController');
+const { insertComment, deletePost, insertNewPost } = require('./controllers/insertDataController');
 const {
   getMainPage, getSignUpPage, getLoginPage, getPostPage, redirectMainController, getProfilepage,
 } = require('./controllers/getPages');
@@ -31,6 +31,7 @@ router.delete('/deletePost', checkAuth, deletePost);
 router.post('/addcomment', checkAuth, insertComment);
 router.post('/signup', signUpValidate, signUpController, userCookie, redirectMainController);
 router.post('/login', loginValidate, userCookie, redirectMainController);
+router.post('/insertPost', checkAuth, insertNewPost);
 
 router.use(error404);
 router.use(error500);

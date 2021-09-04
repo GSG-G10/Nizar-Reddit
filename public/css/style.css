@@ -401,10 +401,14 @@ nav {
     border-radius: 10px;
     border: 2px solid rgb(172, 172, 172);
     outline: none;
+    padding: 0px 15px;
 }
 #post-title,
 #post-url {
     height: 50px;
+}
+#post-url {
+    font-size: 0.7rem;
 }
 #post-content {
     height: 80px;
