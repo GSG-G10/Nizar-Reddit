@@ -29,7 +29,7 @@ router.get('/profileposts', getProfilePostsData);
 router.delete('/deletePost', checkAuth, deletePost);
 
 router.post('/addcomment', checkAuth, insertComment);
-router.post('/signup', signUpValidate, signUpController, userCookie);
+router.post('/signup', signUpValidate, signUpController, userCookie, redirectMainController);
 router.post('/login', loginValidate, userCookie, redirectMainController);
 
 router.use(error404);

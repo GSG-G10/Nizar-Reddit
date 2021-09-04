@@ -311,3 +311,124 @@ nav {
 .post-btn:hover {
     color: #ff591d;
 }
+
+
+/* MODAL STYLE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    width: 800px;
+    height: 440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 15%;
+    padding: 0px 30px;
+    color: #FF4500;
+
+}
+.close {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.close:hover, 
+.close:focus {
+    color: #FF4500;
+    cursor: pointer;
+}
+.modal-title {
+  
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.5rem;
+}
+
+.modal-body {
+    width: 100%;
+    height: 350px;
+    padding: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.modal-test {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+}
+.item {
+    display: flex;
+    flex-direction: column;
+}
+#post-title,
+#post-url,
+#post-content {
+    margin: 8px 0px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    border: 2px solid rgb(172, 172, 172);
+    outline: none;
+}
+#post-title,
+#post-url {
+    height: 50px;
+}
+#post-content {
+    height: 80px;
+    padding: 20px;
+    font-style: italic;
+    font-size: 1rem;
+    color: #FF4500;
+}
+.btn-create1 {
+    align-self: center;
+}
+.buttoncr {
+    height: 40px;
+    width: 100px;
+    background-color: #0079D3;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+.buttoncr:hover {
+    background-color: #0081e4;
+}
+.buttoncr:active {
+    background-color: #0086ec;
+}
