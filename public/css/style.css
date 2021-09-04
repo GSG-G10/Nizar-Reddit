@@ -436,3 +436,31 @@ nav {
 .buttoncr:active {
     background-color: #0086ec;
 }
+
+/* error style */ 
+.error-container {
+    margin-top: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+.error-img{
+    max-width: 40% ;
+}
+.error-title {
+    margin-top: 40px;
+    font-weight: bold;
+}
+.error-title {
+    font-size: 2rem;
+}
+.err-btn {
+    margin-top: 30px;
+}
+.error-img1 {
+    max-width: 40% ;
+    border: 30px;
+    
+}
