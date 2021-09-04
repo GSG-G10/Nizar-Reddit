@@ -27,11 +27,11 @@
 
             <div class="auth">   
 
-                <a class="create" href="#">
-                    <button class="btn-create">
+                <a class="create">
+                    <button class="btn-create modal-appear">
                         <div class="create-content">
                             <img  class="create-icon" src="./icons/create.svg">
-                            <p class="content-btn-create">Create</p>
+                            <p class="content-btn-create ">Create</p>
                         </div>
                     </button>
                 </a>
@@ -53,6 +53,44 @@
 
         </nav>
     </header>
+    <div class="modal">
+
+        <div class="modal-content">
+            
+            <div class="modal-header">
+                <h1 class="modal-title"> Create Post</h1>
+                <span class="close">&times;</span>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="modal-test">
+
+                    <div class="item title">
+                        <label for="post-title">Title</label>
+                        <input type="text" id="post-title" required>
+                    </div>
+
+                    <div class="item url">
+                        <label for="post-url"> add Url for post</label>
+                        <input type="text" id="post-url" required>
+                    </div>
+
+                    <div class="item content">
+                        <label for="post-content">content</label>
+                        <textarea id="post-content" required>write your content here ...</textarea>
+                    </div>
+
+                    <a href="#" class="btn-create1">
+                        <button class="buttoncr"> Create</button>
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
 
     <section class="trending">
 
@@ -96,6 +134,7 @@
     <script src="./js/fetch.js"></script>
     <script src="./js/logout.js"></script>
     <script src="./js/general.js"></script>
+    <script src="./js/./modalDOM.js"></script>
 </body>
 
 </html>
