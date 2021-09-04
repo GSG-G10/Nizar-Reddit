@@ -1,6 +1,6 @@
 const { Pool } = require('pg');
 
-const { DEV_DB_URL, TEST_DB_URL, DB_URL } = process.env;
+const { DEV_DB_URL, TEST_DB_URL, DATABASE_URL } = process.env;
 let dbUrl = '';
 
 if (process.env.NODE_ENV === 'test') {
@@ -8,7 +8,7 @@ if (process.env.NODE_ENV === 'test') {
 } else if (process.env.NODE_ENV === 'development') {
   dbUrl = DEV_DB_URL;
 } else if (process.env.NODE_ENV === 'production') {
-  dbUrl = DB_URL;
+  dbUrl = DATABASE_URL;
 } else {
   throw new Error('DATA BASE ERROR');
 }
