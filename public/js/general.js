@@ -8,7 +8,7 @@ cookies.forEach((ele) => {
   cookiesArr.push(element[0], element[1]);
 });
 const cookieUserName = cookiesArr[cookiesArr.indexOf('username') + 1];
-const cookieAdmin = cookiesArr[cookiesArr.indexOf('admin') + 1];
+let cookieAdmin = cookiesArr[cookiesArr.indexOf('admin') + 1];
 const cookieToken = cookiesArr[cookiesArr.indexOf('username') + 1];
 
 const admin = document.querySelector('.user');

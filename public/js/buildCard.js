@@ -54,7 +54,7 @@ const generateFunction = (postId, likes, username, title, url, comments, singleP
   }
 
   const commentRemove = bulidElement('div', postInfo, 'comment-reomve');
-  
+
   const commentInfo = bulidElement('div', commentRemove, 'comment-info');
   const commentIcon = bulidElement('img', commentInfo, 'comment-icon');
   commentIcon.src = './icons/comment.svg';
@@ -73,6 +73,16 @@ const generateFunction = (postId, likes, username, title, url, comments, singleP
     removeBtn.setAttribute('href', `/deletePost?id=${postId}`);
     const removeText = bulidElement('p', removeBtn, 'reomve-text');
     removeText.textContent = 'Remove';
+    removeBtn.addEventListener('click', fetchDelete);
+
+    const checkAdminCookie = () => {
+      if (cookieAdmin === 'true') {
+        remveInfo.setAttribute('style', 'display: flex;');
+      } else if (cookieAdmin === 'false') {
+        remveInfo.setAttribute('style', 'display: none;');
+      }
+    };
+    checkAdminCookie();
   }
 
   if (profilePage) {
